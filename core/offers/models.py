@@ -46,3 +46,4 @@ class Calculation(models.Model):
 class PositionCalculation(models.Model):
     composition_request = models.ForeignKey(CompositionRequest, on_delete=models.CASCADE)
     price = models.DecimalField(max_digits=19, decimal_places=2)
+    calculation = models.ForeignKey(Calculation, on_delete=models.CASCADE)
